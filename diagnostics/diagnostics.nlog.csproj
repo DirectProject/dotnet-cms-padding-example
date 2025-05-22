@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Health.Direct.Diagnostics.NLog</RootNamespace>
+    <AssemblyName>Health.Direct.Diagnostics.NLog</AssemblyName>   
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.4.0" />
+    <PackageReference Include="NLog.WindowsEventLog" Version="5.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\common.csproj" />
+  </ItemGroup>
+  
+</Project>

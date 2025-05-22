@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>    
+    <RootNamespace>Health.Direct.Common.Tests</RootNamespace>
+    <AssemblyName>Health.Direct.Common.Tests</AssemblyName>   
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- <Reference Include="Security.Cryptography, Version=1.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"> -->
+    <!--   <SpecificVersion>False</SpecificVersion> -->
+    <!--   <HintPath>..\..\external\codeplex\Security.Cryptography.dll</HintPath> -->
+    <!-- </Reference> -->
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.6.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
+    <PackageReference Include="NSubstitute" Version="5.3.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.abstractions" Version="2.0.3" />
+    <PackageReference Include="xunit.assert" Version="2.9.3" />
+    <PackageReference Include="xunit.core" Version="2.9.3" />    
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mime\TestFiles\Multipart.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\common.metadata\common.metadata.csproj" />
+    <ProjectReference Include="..\..\common\common.csproj" />
+    <ProjectReference Include="..\..\diagnostics\diagnostics.nlog.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DnsResolver\DnsTestCerts\redmond.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DnsResolver\DnsTestCerts\umesh.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mail\TestFiles\Wrapped_Quoted2.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mail\TestFiles\Wrapped_Quoted3.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Mail\TestFiles\Wrapped_Quoted.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DsnTestMessages\DSNMessage.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DsnTestMessages\DSNMessageNoActionOrStatus.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DsnTestMessages\DSNMessageOrigInReplyTo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Update="Mail\TestFiles\Wrapped_Base64.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mail\TestFiles\Wrapped_Base642.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Mail\TestFiles\Wrapped_Quoted4.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Mime\TestFiles\QuotedHtml_1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mime\TestFiles\QuotedHtml_2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mime\TestFiles\QuotedXml_1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+    
+</Project>
