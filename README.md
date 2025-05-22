@@ -25,3 +25,5 @@ foreach (X509Certificate2 cert in encryptingCertificates)
 }
 
 ```
+
+See the [Encrypt_Then_Decrypt_LogsDebugMessages](https://github.com/DirectProject/dotnet-cms-padding-example/blob/9e71e7d8b088c4a7d9bfec1b08337b5f907bac2f/_tests/common/EncryptionTests.cs#L24) unit test.
